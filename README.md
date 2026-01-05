@@ -51,3 +51,8 @@ that directly interact with microcontroller peripherals and external
 components.
 
 Hardware - The lowest layer representing the physical STM32F401 microcontroller and its peripherals.
+
+## Versions
+
+**v1.0** - First stable release. Features a fully functional bootloader capable
+of updating the application firmware via UART.
