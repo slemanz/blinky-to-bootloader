@@ -34,8 +34,11 @@ void cli_update(void)
 
         if(ch == '\r')
         {
-            // nothing todo
-        }else if(ch == '\n')
+            ch = '\n';
+            _comm->send(&ch, 1);
+        }
+
+        if(ch == '\n')
         {
              // command end
              cli_buffer[cli_idx] = '\0';
@@ -65,10 +68,10 @@ void cli_help(void)
 {
     if(_table == NULL) return;
 
-    printf("===================================\n");
+    printf("===================================\r\n");
     for (int i = 0; i < _table_len; i++)
     {
-    	printf("%s: %s\n", _table[i].name, _table[i].help);
+    	printf("%s: %s\r\n", _table[i].name, _table[i].help);
     }
-    printf("===================================\n");
+    printf("===================================\r\n");
 }

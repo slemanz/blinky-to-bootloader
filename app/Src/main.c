@@ -23,8 +23,8 @@ int main(void)
     simple_timer_t timer_cli;
     simple_timer_setup(&timer_cli, 100, true);
 
-    printf("\n");
-    printf("Init app\n");
+    printf("\r\n");
+    printf("Init app\r\n");
 
     while (1)
     {
